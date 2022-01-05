@@ -7,7 +7,7 @@ import topsis_predict from "../services/topsis";
 export default function ResultGrid(props) {
     
     const columns = [
-        {field:'ranking', headerName: 'Rank', type:"number", width: 60},
+        {field:'ranking', headerName: 'Rank', width: 60},
         {field:'name', headerName: 'Name', width: 160},
     ];
 
