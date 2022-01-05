@@ -58,7 +58,7 @@ export default function Form(props) {
 
         <TextField disabled={props.disabled} required className={styles.input}
           type="number"
-          name="weight" label={"Weight" + " (%)"} variant="filled"
+          name="weight" label={"Weight (%)"} variant="filled"
           value={weight} onChange={handleChange}
         />
 

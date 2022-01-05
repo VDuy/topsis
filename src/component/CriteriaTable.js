@@ -13,7 +13,7 @@ export default function CriteriaTable(props) {
   const data_columns = [
     { name: 'Criteria', attribute: 'criterionName' },
     //  { name: 'Type', attribute: 'type' },
-    { name: 'Weight' + ' (%)', attribute: 'weight' },
+    { name: 'Weight (%)', attribute: 'weight' },
     { name: 'REMOVE' }
   ];
 
