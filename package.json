@@ -2,8 +2,7 @@
   "name": "topsis-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://vduy.github.io/topsis-demo.github.io/",
-  "dependencies": {
+   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/data-grid": "^4.0.0-alpha.22",
     "cra-template": "1.1.2",
