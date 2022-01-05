@@ -1,0 +1,8 @@
+{
+  "short_name": "TOPSIS Demo",
+  "name": "TOPSIS Demo Vir1",
+  "start_url": "https://vduy.github.io/topsis-demo.github.io/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
