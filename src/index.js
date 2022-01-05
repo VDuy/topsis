@@ -4,7 +4,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline  from '@material-ui/core/CssBaseline';
 import {Suspense} from 'react';
 import App from './App';
-
+import theme from './component/theme';
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
