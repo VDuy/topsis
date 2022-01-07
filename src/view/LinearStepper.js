@@ -7,7 +7,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import XLSX from 'xlsx';
+
 import CriteriaTable from "../component/CriteriaTable";
 import Form from "../component/Form";
 import Grid from "../component/Grid";
@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LinearStepper(props) {
   const classes = useStyles();
-  const dataColumnName = 'Name';
+
   const [state, setState] = useState({
     criteria: [],
     sum: 0,
@@ -60,41 +60,12 @@ export default function LinearStepper(props) {
     });
   };
 
-  const mapRows = (row, idx) => {
-    let _row = { ...row };
-    _row.name = _row[dataColumnName];
-    delete _row[dataColumnName];
-    return {
-      ..._row,
-      name: _row.name,
-      id: idx + state.dataset.length
-    }
-  };
 
   const handleGridSubmit = (row) => {
     setState({ ...state, dataset: [...state.dataset, { ...row, id: state.dataset.length }], disableResults: false });
   };
 
-  const handleFile = (file) => {
-    setState({ ...state, loading: true });
-    const reader = new FileReader();
-    const rABS = !!reader.readAsBinaryString;
-    reader.onload = (e) => {
-      const bstr = e.target.result;
-      const wb = XLSX.read(bstr, { type: rABS ? "binary" : "array" });
-      const wsname = wb.SheetNames[0];
-      const ws = wb.Sheets[wsname];
-      const data = XLSX.utils.sheet_to_json(ws, { header: 0 });
-      console.log(data.map(mapRows));
-      setState({
-        ...state, dataset: data.map(mapRows),
-        disableResults: false,
-        loading: false
-      });
-    };
-    if (rABS) reader.readAsBinaryString(file);
-    else reader.readAsArrayBuffer(file);
-  }
+  
 
   function getStepContent(step) {
     switch (step) {
@@ -119,7 +90,7 @@ export default function LinearStepper(props) {
               fields={state.criteria.map(d => d.criterionName)}
               disabled={state.disableGrid}
               handleSubmit={handleGridSubmit}
-              handleFile={handleFile}
+          
             />
           </Box>
         );
