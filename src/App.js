@@ -3,7 +3,7 @@ import Container from '@material-ui/core/Container';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography  from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+
 import LinearStepper from './view/LinearStepper';
 import { makeStyles } from '@material-ui/core/styles';
 import { Suspense} from 'react';
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes  = useStyles();
   return (
-   <Box className={classes.root}>
+   <div className={classes.root}>
       <AppBar position="static">
       <Toolbar >
         <Suspense fallback='loading...'>
@@ -35,7 +35,7 @@ function App() {
       <Container maxWidth="lg">
         <LinearStepper />
       </Container>
-   </Box>
+   </div>
   );
 }
 
