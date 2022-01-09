@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography  from '@material-ui/core/Typography';
 
-import LinearStepper from './view/LinearStepper';
+import LinearStepper from './component/LinearStepper';
 import { makeStyles } from '@material-ui/core/styles';
 import { Suspense} from 'react';
 
