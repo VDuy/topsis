@@ -140,6 +140,7 @@ export default function LinearStepper(props) {
         {steps.map((label) => {
           const stepProps = {};
           const labelProps = {};
+          
           return (
             <Step key={label} {...stepProps}>
               <StepLabel {...labelProps}>{label}</StepLabel>

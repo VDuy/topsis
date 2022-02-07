@@ -26,7 +26,7 @@ function App() {
       <Toolbar >
         <Suspense fallback='loading...'>
         <Typography variant="h6" className={classes.title} component="h1">
-         TOPSIS DEMO
+        ĐÁNH GIÁ, XẾP HẠNG MỨC ĐỘ CHUYỂN ĐỔI SỐ CỦA CÁC BỘ, NGÀNH TẠI VIỆT NAM
         </Typography>
         </Suspense>
       </Toolbar>
@@ -35,6 +35,7 @@ function App() {
       <Container maxWidth="lg">
         <LinearStepper />
       </Container>
+
    </div>
   );
 }
