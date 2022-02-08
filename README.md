@@ -6,20 +6,22 @@ This project is a web app implementation for this algorithm.
 
 ## Guide with example
 
-### Prepare the dataset 
+### To create a project, run:
+#### npx create-react-app topsis
+#### cd topsis
+#### npm start 
 
-### Set the weights
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Set weight for each criterion with your preferences.
+### To install web package, run:
+#### npm init
 
-The sum of the weights has to be equals 100
+### Requirement
+#### NodeJS and npm
+#### Git and CLI
 
-### Add row manually
 
-### See results
-
-Finally, see the results.
-The top ranking with best alternatives. 
 
 
 
