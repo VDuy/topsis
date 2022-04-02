@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     margin: theme.spacing(2, 0),
+    // spacing: '4px'
   }
 }));
 
@@ -46,9 +47,9 @@ export default function Form(props) {
   const { criterionName, weight } = state;
   return (
     <form disabled className={styles.form} onSubmit={submitForm}>
-      <Box display="flex" flexDirection='row' >
+      <Box display="flex" flexDirection='row' maxWidth={'100%'} >
 
-        <TextField disabled={props.disabled} required name="criterionName"
+        <TextField fullWidth sx={{ m: 1 }} disabled={props.disabled} required name="criterionName"
           className={styles.input} label={'Criteria'} variant="filled"
           value={criterionName} onChange={handleChange} />
 
