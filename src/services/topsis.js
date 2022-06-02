@@ -27,7 +27,7 @@ export default function topsis_predict(dataset, criteria) {
             Math.pow(negative_ideal[j] - valor, 2)))));
 
     const e_vector = negative_distances.map((d_, i) => d_ / (positive_distances[i] + d_));
-        // return besst to worst
+        // return best to worst
     return [...e_vector].sort().map(d => e_vector.indexOf(d));
     // reverse worst to best
     //return [...e_vector].sort().reverse().map(d => e_vector.indexOf(d));

@@ -22,8 +22,8 @@ const useStyles = makeStyles((theme) => ({
 export default function Form(props) {
   const initState = {
     criterionName: '',
-    weight: 0,
-    type: 1
+    weight: '',
+
   };
 
   const styles = useStyles();
@@ -49,19 +49,20 @@ export default function Form(props) {
     <form disabled className={styles.form} onSubmit={submitForm}>
       <Box display="flex" flexDirection='row' maxWidth={'100%'} >
 
-        <TextField fullWidth sx={{ m: 1 }} disabled={props.disabled} required name="criterionName"
-          className={styles.input} label={'Criteria'} variant="filled"
+        <TextField fullWidth disabled={props.disabled} required
+          className={styles.input}
+          name="criterionName" label={'Criteria'} variant="filled"
           value={criterionName} onChange={handleChange} />
 
-        <TextField disabled={props.disabled} required className={styles.input}
-          type="number"
+        <TextField fullWidth disabled={props.disabled} required
+          className={styles.input} type="number"
           name="weight" label={"Weight (%)"} variant="filled"
-          value={weight} onChange={handleChange}
-        />
-
+          value={weight} onChange={handleChange} />
       </Box>
 
-      <Button disabled={props.disabled} className={styles.button} type="submit" variant="contained" color="primary"> Add </Button>
+      <Button disabled={props.disabled} 
+      className={styles.button} type="submit" 
+      variant="contained" color="primary"> Add </Button>
     </form>
   );
 }

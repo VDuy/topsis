@@ -65,7 +65,7 @@ export default function LinearStepper(props) {
     setState({ ...state, dataset: [...state.dataset, { ...row, id: state.dataset.length }], disableResults: false });
   };
 
-  
+
 
   function getStepContent(step) {
     switch (step) {
@@ -90,7 +90,7 @@ export default function LinearStepper(props) {
               fields={state.criteria.map(d => d.criterionName)}
               disabled={state.disableGrid}
               handleSubmit={handleGridSubmit}
-          
+
             />
           </Box>
         );
@@ -140,7 +140,7 @@ export default function LinearStepper(props) {
         {steps.map((label) => {
           const stepProps = {};
           const labelProps = {};
-          
+
           return (
             <Step key={label} {...stepProps}>
               <StepLabel {...labelProps}>{label}</StepLabel>
@@ -167,20 +167,18 @@ export default function LinearStepper(props) {
             <Button
               disabled={activeStep === 0}
               onClick={handleBack}
-              className={classes.button}
-            >BACK</Button>
+              className={classes.button}>BACK</Button>
             <Button
               variant="contained"
               color="primary"
               onClick={handleNext}
-              disabled={(activeStep === 0 && state.disableGrid) || (activeStep === 1 && state.disableResults)}
+              disabled={(activeStep === 0 && state.disableGrid)
+                || (activeStep === 1 && state.disableResults)}
               className={classes.button}
-            >
-              {activeStep === steps.length - 1 ? 'FINISH' : 'NEXT'}
-            </Button>
+            > {activeStep === steps.length - 1 ? 'FINISH' : 'NEXT'}</Button>
           </div>
         </div>
-        
+
       )}
     </Box>
   );
